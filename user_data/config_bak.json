@@ -1,0 +1,48 @@
+{
+  "exchange": {
+    "name": "binance",
+    "key": "你的币安API Key",
+    "secret": "你的币安Secret Key",
+    "ccxt_config": {
+      "enableRateLimit": true,
+      "rateLimit": 1000,
+      "timeout": 30000
+    },
+    "ccxt_async_config": {
+      "enableRateLimit": true
+    },
+    "pair_whitelist": [
+      "BTC/USDT",
+      "ETH/USDT"
+    ],
+    "pair_blacklist": [
+      "*/BUSD",
+      "*/USDC"
+    ]
+  },
+
+
+  "dry_run": true,
+  "dry_run_wallet": 1000,
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "tradable_balance_ratio": 0.9,
+  "fee": 0.001,
+
+
+  "stoploss": -0.015,
+  "trailing_stop": true,
+  "trailing_stop_positive": 0.005,
+  "trailing_stop_positive_offset": 0.01,
+  "max_open_trades": 1,
+  "max_drawdown": 0.1,
+
+
+  "strategy": "MovingAverageCrossStrategy",
+  "timeframe": "1h",
+  "process_only_new_candles": true,
+
+
+  "dataformat_ohlcv": "json",
+  "refresh_rate": 60
+}
