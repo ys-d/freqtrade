@@ -31,7 +31,7 @@ As explained above, the agent is "trained" in an artificial trading "environment
 Setting up and running a Reinforcement Learning model is the same as running a Regressor or Classifier. The same two flags, `--freqaimodel` and `--strategy`, must be defined on the command line:
 
 ```bash
-freqtrade trade --freqaimodel ReinforcementLearner --strategy MyRLStrategy --config config.json
+freqtrade trade --freqaimodel ReinforcementLearner --strategy MyRLStrategy --config binance_config.json
 ```
 
 where `ReinforcementLearner` will use the templated `ReinforcementLearner` from `freqai/prediction_models/ReinforcementLearner` (or a custom user defined one located in `user_data/freqaimodels`). The strategy, on the other hand, follows the same base [feature engineering](freqai-feature-engineering.md) with `feature_engineering_*` as a typical Regressor. The difference lies in the creation of the targets, Reinforcement Learning doesn't require them. However, FreqAI requires a default (neutral) value to be set in the action column:

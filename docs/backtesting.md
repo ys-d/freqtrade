@@ -98,7 +98,7 @@ Where `SampleStrategy1` and `AwesomeStrategy` refer to class names of strategies
 Prevent exporting trades to file
 
 ```bash
-freqtrade backtesting --strategy backtesting --export none --config config.json 
+freqtrade backtesting --strategy backtesting --export none --config binance_config.json 
 ```
 
 Only use this if you're sure you'll not want to plot or analyze your results further.
